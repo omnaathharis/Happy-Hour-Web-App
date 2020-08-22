@@ -1,11 +1,14 @@
 import React from 'react'
+import Header from '../components/Header'
+import RestaurantTable from '../components/RestaurantTable'
 
 const Home = () => {
     return (
         <div>
-            Home   
+            <Header/>
+            <RestaurantTable/>
         </div>
     )
 }
 
-export default Home
+export default Home;

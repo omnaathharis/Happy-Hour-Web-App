@@ -1,9 +1,14 @@
 require('dotenv').config()
 const express = require("express");
 const bodyParser = require('body-parser');
-const db = require("./db")
+const cors = require("cors");
+const db = require("./db");
+
 
 const app = express();
+
+app.use(cors());
+app.use(express.json());
 
 const jsonParser = bodyParser.json();
 
@@ -40,7 +45,7 @@ app.get("/restaurants/:id", async (req, res) => {
 })
 
 app.post("/restaurants", jsonParser,  async (req, res) => {
-    console.log(req.body);
+    req.body.website_url = `//${req.body.website_url}`;
 
     try {
         const results = await db.query(
