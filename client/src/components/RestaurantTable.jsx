@@ -1,9 +1,12 @@
 import React, { useEffect, useContext } from "react";
 import HappyHour from "../apis/HappyHour";
 import { RestaurantsContext } from "../context/RestaurantsContext";
+import { useHistory } from "react-router-dom"
 
 const RestaurantTable = (props) => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
+
+  let history = useHistory()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +30,14 @@ const RestaurantTable = (props) => {
     } catch (err) {
       console.log(err);
     }
+  }
+
+  const handleUpdate = (id) => {
+    history.push(`/restaurants/${id}/update`)
+  }
+
+  const handleAdd = () => {
+    history.push(`/restaurants/add`)
   }
 
   return (
@@ -60,7 +71,7 @@ const RestaurantTable = (props) => {
                     </a>
                   </td>
                   <td>
-                    <button className="btn btn-info">Update</button>
+                    <button onClick={() => handleUpdate(restaurant.id)} className="btn btn-info">Update</button>
                   </td>
                   <td>
                     <button onClick={() => handleDelete(restaurant.id)} className="btn btn-danger">Delete</button>
@@ -79,7 +90,7 @@ const RestaurantTable = (props) => {
         </tbody>
       </table>
       <div className="create-button">
-        <button type="button" className="btn btn-info">
+        <button onClick={() => handleAdd()} type="button" className="btn btn-info">
           Add
         </button>
       </div>

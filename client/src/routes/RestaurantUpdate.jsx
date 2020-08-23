@@ -1,11 +1,15 @@
 import React from 'react'
+import UpdateCentre from '../components/UpdateCentre'
 
 const RestaurantUpdate = () => {
     return (
         <div>
-            Update Restaurant Here   
+            <h1 className="text-center">
+                Update Restaurant
+            </h1>
+            <UpdateCentre/>
         </div>
     )
 }
 
-export default RestaurantUpdate
+export default RestaurantUpdate;
