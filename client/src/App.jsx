@@ -9,7 +9,7 @@ import { RestaurantsContextProvider } from "./context/RestaurantsContext";
 const App = () => {
   return (
     <RestaurantsContextProvider>
-      <div className="container">
+      <div>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />

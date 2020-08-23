@@ -41,7 +41,7 @@ const RestaurantTable = (props) => {
   }
 
   return (
-    <div className="list-group">
+    <div className="list-group container">
       <table className="table table-hover table-dark">
         <thead>
           <tr>

@@ -28,7 +28,7 @@ const AddCentre = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <form action="">
                 <div className="form-group">
                     <label htmlFor="name">Name</label>

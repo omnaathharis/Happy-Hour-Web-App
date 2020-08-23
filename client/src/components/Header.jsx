@@ -3,9 +3,12 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <h1 className="font-weight-light display-1 text-center">
-        Restaurant Finder
-      </h1>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <i class="fas fa-search"></i>
+        <a class="navbar-brand" href="#">
+          Happy Hour Finder
+        </a>
+      </nav>
     </div>
   );
 };
