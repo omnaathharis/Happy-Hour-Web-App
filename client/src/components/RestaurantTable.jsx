@@ -79,14 +79,6 @@ const RestaurantTable = (props) => {
                 </tr>
               );
             })}
-          {/* <tr>
-            <th>Earls</th>
-            <td>15:00 -  18:00</td>
-            <td>$$$</td>
-            <td><button className="btn btn-primary">Website</button></td>
-            <td><button className="btn btn-warning">Edit</button></td>
-            <td><button className="btn btn-danger">Delete</button></td>
-          </tr> */}
         </tbody>
       </table>
       <div className="create-button">
