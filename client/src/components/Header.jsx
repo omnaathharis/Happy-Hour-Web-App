@@ -1,14 +1,12 @@
 import React from "react";
+import "../css/header.css"
 
 const Header = () => {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <i className="fas fa-search"></i>
-        <a className="navbar-brand" href="#">
-          Happy Hour Finder
-        </a>
-      </nav>
+    <div className="header-spacing">
+      <h1 className="font-weight-light display-4 text-center pt-10">
+        Happy Hour Locator - Vancouver Edition
+      </h1>
     </div>
   );
 };

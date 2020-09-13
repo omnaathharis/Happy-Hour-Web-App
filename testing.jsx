@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { RestaurantsContext } from "../context/RestaurantsContext";
-import "../css/map.css"
+import "../css/marker.css"
 
 const Map = () => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
@@ -10,14 +10,14 @@ const Map = () => {
     latitude: 49.2827,
     longitude: -123.1207,
     zoom: 11,
-    width: "100vw",
-    height: "75vh",
+    width: "85.5vw",
+    height: "80vh",
   });
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
   return (
-    <div className="map-spacing">
+    <div className="center container">
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken="pk.eyJ1IjoidGFoZXJmYSIsImEiOiJja2U3cWE4N2MxcDRoMnRwODM3dHBjcDZ0In0.GsC7vnm_WY9UNFGne0fxWA"
@@ -45,9 +45,9 @@ const Map = () => {
           <Popup
             latitude={selectedRestaurant.latitude}
             longitude={selectedRestaurant.longitude}
-            // onClose={() => {
-            //   setSelectedRestaurant(null);
-            // }}
+            onClose={() => {
+              setSelectedRestaurant(null);
+            }}
           >
             <div>
               <h5>{selectedRestaurant.name}</h5>
