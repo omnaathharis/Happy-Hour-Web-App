@@ -9,9 +9,9 @@ const Map = () => {
   const [viewport, setViewport] = useState({
     latitude: 49.2827,
     longitude: -123.1207,
-    zoom: 11,
+    zoom: 11.5,
     width: "100vw",
-    height: "75vh",
+    height: "70vh",
   });
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
@@ -45,9 +45,9 @@ const Map = () => {
           <Popup
             latitude={selectedRestaurant.latitude}
             longitude={selectedRestaurant.longitude}
-            // onClose={() => {
-            //   setSelectedRestaurant(null);
-            // }}
+            onClose={() => {
+              setSelectedRestaurant(null);
+            }}
           >
             <div>
               <h5>{selectedRestaurant.name}</h5>

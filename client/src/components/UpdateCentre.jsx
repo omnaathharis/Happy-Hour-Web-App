@@ -17,6 +17,7 @@ const UpdateCentre = (props) => {
     useEffect(() => {
         const fetchData = async() => {
             const response = await HappyHour.get(`/${id}`)
+            console.log(response)
             console.log(response.data.data.restaurant[0])
 
             setName(response.data.data.restaurant[0].name)
@@ -69,7 +70,7 @@ const UpdateCentre = (props) => {
                     <input value={priceRating} onChange={e => setPriceRating(e.target.value)} id="price_rating" className="form-control" type="number"/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="website_url">Website URL (include a '//' at the beginning)</label>
+                    <label htmlFor="website_url">Website URL</label>
                     <input value={website} onChange={e => setWebsite(e.target.value)} id="website_url" className="form-control" type="text"/>
                 </div>
                 <button onClick={handleSubmit} className="btn btn-info">Submit</button>
