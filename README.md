@@ -13,10 +13,10 @@
 </p>
 
 ![recordit-clip1](https://user-images.githubusercontent.com/53185030/93166070-edbb4d00-f6da-11ea-855b-afbde9bb9497.gif)
-Showcasing the mapbox API and the creation of a restaurant entry.
+#### Showcasing the mapbox API and the creation of a restaurant entry.
 
 ![recordit-clip2](https://user-images.githubusercontent.com/53185030/93166141-1c392800-f6db-11ea-8f80-6e4409f5bc87.gif)
-Showcasing the ability to delete and update existing restaurant entries.
+#### Showcasing the ability to delete and update existing restaurant entries.
 
 
 ## Project Description
