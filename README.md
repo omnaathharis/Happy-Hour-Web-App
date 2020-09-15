@@ -23,6 +23,11 @@
 
 Full stack web application that acts as a visual CRUD database of happy hour events around Vancouver. Complete with a map view, implemented with the help of two external remote APIs, and an accompanying table too.
 
+Front-end developed using React; utilizing React Routers, React Hooks and React's Context API - styled with Bootstrap and custom CSS.
+
+The back-end comprised of a RESTful API developed through Node and Express, with PostgreSQL as the database that stored
+information received from both the user and the two external remote APIs.
+
 ## Developed With
 
 Tech Stack
@@ -38,8 +43,3 @@ Tech Stack
 External APIs
 * [Geocodio](https://www.geocod.io/)
 * [Mapbox](https://www.mapbox.com/)
-
-Front-end developed with React; utilizing React Routers, React Hooks and React's Context API - styled with Bootstrap and custom CSS.
-
-The back-end comprised of a RESTful API developed through Node and Express, with PostgreSQL as the database that stored
-information received from both the user and the two external remote APIs.
